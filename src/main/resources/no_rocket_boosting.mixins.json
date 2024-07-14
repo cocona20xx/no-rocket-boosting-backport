@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "trinitysoft.norocketboost.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "no_rocket_boosting.refmap.json",
+  "mixins": [
+    "FireworkRocketItemMixin",
+    "ProjectileMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

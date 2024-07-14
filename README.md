@@ -1,27 +1,28 @@
+# No Rocket Boost
+No Rocket Boost is a Minecraft mod that aims to balance elytra by removing rocket boosting and adding back punch bow boosting.
 
-Installation information
-=======
+This repository is a backport of the original mod found at https://github.com/Enchanted-Games/no-elytra-boost
+## Configuration
+This mod is configured using gamerules. You can set these by using the `/gamerule` command or by setting them in the Game Rules screen when creating a world.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+### `eg_EnableElytraRocketBoosting`
+- Enables or disables elytra rocket boosting.
+- When set to `false`, players can use rockets to boost themselves while flying.
+- When set to `true`, players won't be able to use rockets to boost.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+### `eg_EnablePunchBowBoosting`
+- Enables or disables elytra punch bow boosting.
+- When set to `false`, the vanilla behaviour for arrows hitting their shooter is used.
+- When set to `true`, arrows can hit their shooter while flying with an elytra if some conditions are met. [See the code](https://github.com/Enchanted-Games/no-elytra-boost/blob/1.20.6/common/src/main/java/games/enchanted/norocketboosting/mixin/ProjectileMixin.java#L30) if you want to know exactly how this works
+- This doesn't work exactly how it did in 1.9/1.10, however, I have tried to make it feel pretty similar
 
-> **Note**: For IDEs other than Intellij IDEA, you must run the `ideBeforeRun` task first from the terminal (such as `./gradlew ideBeforeRun`) for the run configs to work.
+## Installation
+The mod has to be installed on the server side in order to work.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+If it is installed on the client, it will remove the arm swing animation when attempting to rocket boost. It will only work in singleplayer or servers that also have the mod installed
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## License
+<p xmlns:cc="http://creativecommons.org/ns#" >No Rocket Boost by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://enchanted.games">ioblackshaw (a.k.a. Enchanted_Games)</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
+(This backport is also under the same CC BY-NC 4.0 license, if that wasn't clear.)
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Video content creators may monetise videos including this work provided the license is followed.
