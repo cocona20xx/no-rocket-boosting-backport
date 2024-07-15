@@ -77,7 +77,7 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, 'no_rocket_boosting.refmap.json'
+    add sourceSets.main, 'mixins.no_rocket_boosting.refmap.json'
     config 'no_rocket_boosting.mixins.json'
 }
 
