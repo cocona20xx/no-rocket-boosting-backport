@@ -13,7 +13,7 @@ This mod is configured using gamerules. You can set these by using the `/gamerul
 ### `eg_EnablePunchBowBoosting`
 - Enables or disables elytra punch bow boosting.
 - When set to `false`, the vanilla behaviour for arrows hitting their shooter is used.
-- When set to `true`, arrows can hit their shooter while flying with an elytra if some conditions are met. [See the code](https://github.com/Enchanted-Games/no-elytra-boost/blob/1.20.6/common/src/main/java/games/enchanted/norocketboosting/mixin/ProjectileMixin.java#L30) if you want to know exactly how this works
+- When set to `true`, arrows can hit their shooter while flying with an elytra if some conditions are met. [See the code](https://github.com/cocona20xx/no-rocket-boosting-backport/blob/main/src/main/java/trinitysoft/norocketboost/mixin/ProjectileMixin.java#L30) if you want to know exactly how this works
 - This doesn't work exactly how it did in 1.9/1.10, however, I have tried to make it feel pretty similar
 
 ## Installation
