@@ -18,9 +18,9 @@ public class NoRocketBoostMod {
     }
 
     public static final GameRules.Key<GameRules.BooleanValue> RULE_ROCKET_BOOSTING = NoRocketBoostMod.registerGameRule(
-            "enableElytraRocketBoosting", GameRules.Category.PLAYER, NoRocketBoostMod.basicBooleanRuleType(false)
+            "eg_EnableElytraRocketBoosting", GameRules.Category.PLAYER, NoRocketBoostMod.basicBooleanRuleType(false)
     );
     public static final GameRules.Key<GameRules.BooleanValue> RULE_PUNCH_BOOSTING = NoRocketBoostMod.registerGameRule(
-            "enablePunchBowBoosting", GameRules.Category.PLAYER, NoRocketBoostMod.basicBooleanRuleType(true)
+            "eg_EnablePunchBowBoosting", GameRules.Category.PLAYER, NoRocketBoostMod.basicBooleanRuleType(true)
     );
 }

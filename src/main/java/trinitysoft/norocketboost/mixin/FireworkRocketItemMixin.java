@@ -21,7 +21,6 @@ public class FireworkRocketItemMixin {
     )
     // cancel elytra boost (if on server) and cancel hand animation (if on client)
     public void init(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
-        NoRocketBoostMod.LOGGER.info("Test!");
         boolean rocketBoostingEnabled = level.getGameRules().getRule(NoRocketBoostMod.RULE_ROCKET_BOOSTING).get();
         if (player.isFallFlying() && (!rocketBoostingEnabled && !player.isCreative())) {
             cir.setReturnValue(InteractionResultHolder.pass(player.getItemInHand(interactionHand)));
